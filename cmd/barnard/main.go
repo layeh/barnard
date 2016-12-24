@@ -1,4 +1,4 @@
-package main
+package main // import "layeh.com/barnard/cmd/barnard"
 
 import (
 	"crypto/tls"
@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/layeh/barnard"
-	"github.com/layeh/barnard/uiterm"
-	"github.com/layeh/gumble/gumble"
-	_ "github.com/layeh/gumble/opus"
+	"layeh.com/barnard"
+	"layeh.com/barnard/uiterm"
+	"layeh.com/gumble/gumble"
+	_ "layeh.com/gumble/opus"
 )
 
 func main() {

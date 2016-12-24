@@ -5,11 +5,7 @@ chat software.
 
 ![Screenshot](https://i.imgur.com/B8ldT5k.png)
 
-## Requirements
-
-- [gumble](https://github.com/layeh/gumble/tree/master/gumble)
-- [gumbleopenal](https://github.com/layeh/gumble/tree/master/gumbleopenal)
-- [termbox-go](https://github.com/nsf/termbox-go)
+    go get -u layeh.com/barnard
 
 ## License
 

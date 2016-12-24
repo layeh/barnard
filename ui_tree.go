@@ -1,8 +1,8 @@
-package barnard
+package barnard // import "layeh.com/barnard"
 
 import (
-	"github.com/layeh/barnard/uiterm"
-	"github.com/layeh/gumble/gumble"
+	"layeh.com/barnard/uiterm"
+	"layeh.com/gumble/gumble"
 )
 
 type TreeItem struct {

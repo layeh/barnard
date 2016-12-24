@@ -1,4 +1,4 @@
-package uiterm
+package uiterm // import "layeh.com/barnard/uiterm"
 
 type View interface {
 	uiInitialize(ui *Ui)

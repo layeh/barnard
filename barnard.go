@@ -1,11 +1,11 @@
-package barnard
+package barnard // import "layeh.com/barnard"
 
 import (
 	"crypto/tls"
 
-	"github.com/layeh/barnard/uiterm"
-	"github.com/layeh/gumble/gumble"
-	"github.com/layeh/gumble/gumbleopenal"
+	"layeh.com/barnard/uiterm"
+	"layeh.com/gumble/gumble"
+	"layeh.com/gumble/gumbleopenal"
 )
 
 type Barnard struct {

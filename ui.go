@@ -1,4 +1,4 @@
-package barnard
+package barnard // import "layeh.com/barnard"
 
 import (
 	"fmt"
@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/kennygrant/sanitize"
-	"github.com/layeh/barnard/uiterm"
-	"github.com/layeh/gumble/gumble"
+	"layeh.com/barnard/uiterm"
+	"layeh.com/gumble/gumble"
 )
 
 const (

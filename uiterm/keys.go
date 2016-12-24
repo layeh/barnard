@@ -1,4 +1,4 @@
-package uiterm
+package uiterm // import "layeh.com/barnard/uiterm"
 
 /*
  * Source: https://godoc.org/github.com/nsf/termbox-go

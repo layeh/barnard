@@ -1,13 +1,13 @@
-package barnard
+package barnard // import "layeh.com/barnard"
 
 import (
 	"fmt"
 	"net"
 	"os"
 
-	"github.com/layeh/gumble/gumble"
-	"github.com/layeh/gumble/gumbleopenal"
-	"github.com/layeh/gumble/gumbleutil"
+	"layeh.com/gumble/gumble"
+	"layeh.com/gumble/gumbleopenal"
+	"layeh.com/gumble/gumbleutil"
 )
 
 func (b *Barnard) start() {
