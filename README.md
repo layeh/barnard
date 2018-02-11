@@ -1,6 +1,6 @@
 # barnard
 
-barnard is a terminal-based client for the [Mumble](http://mumble.info) voice
+barnard is a terminal-based client for the [Mumble](https://mumble.info) voice
 chat software.
 
 ![Screenshot](https://i.imgur.com/B8ldT5k.png)
