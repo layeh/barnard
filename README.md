@@ -9,7 +9,7 @@ chat software.
 
 ## License
 
-MPL 2.0
+GPLv2
 
 ## Author
 
