@@ -20,6 +20,19 @@ To fetch and build:
 
 After running the command above, `barnard` will be compiled as `$(go env GOPATH)/bin/barnard`.
 
+## Manual
+
+### Key bindings
+
+- <kbd>F1</kbd>: toggle voice transmission
+- <kbd>Ctrl+L</kbd>: clear chat log
+- <kbd>Tab</kbd>: toggle focus between chat and user tree
+- <kbd>Page Up</kbd>: scroll chat up
+- <kbd>Page Down</kbd>: scroll chat down
+- <kbd>Home</kbd>: scroll chat to the top
+- <kbd>End</kbd>: scroll chat to the bottom
+- <kbd>F10</kbd>: quit
+
 ## License
 
 GPLv2
