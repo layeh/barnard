@@ -1,4 +1,4 @@
-package uiterm // import "layeh.com/barnard/uiterm"
+package uiterm
 
 import (
 	"strings"

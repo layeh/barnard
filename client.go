@@ -1,4 +1,4 @@
-package barnard // import "layeh.com/barnard"
+package main
 
 import (
 	"fmt"

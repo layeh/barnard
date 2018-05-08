@@ -1,4 +1,4 @@
-package main // import "layeh.com/barnard/cmd/barnard"
+package main
 
 import (
 	"crypto/tls"
@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"os"
 
-	"layeh.com/barnard"
 	"layeh.com/barnard/uiterm"
 	"layeh.com/gumble/gumble"
 	_ "layeh.com/gumble/opus"
@@ -23,8 +22,8 @@ func main() {
 	flag.Parse()
 
 	// Initialize
-	b := barnard.Barnard{
-		Config: gumble.NewConfig(),
+	b := Barnard{
+		Config:  gumble.NewConfig(),
 		Address: *server,
 	}
 
