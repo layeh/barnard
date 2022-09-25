@@ -163,6 +163,15 @@ func (b *Barnard) OnUiInitialize(ui *uiterm.Ui) {
 
 	b.start()
 
+	b.AddOutputLine("F1       : Toggle Voice Transmission")
+	b.AddOutputLine("CTRL+L   : Clear chat log")
+	b.AddOutputLine("TAB      : Toggle focus between chat and user tree")
+	b.AddOutputLine("Page Up  : Scroll chat up")
+	b.AddOutputLine("Page Down: Scroll chat down")
+	b.AddOutputLine("HOME     : Scroll chat to the top")
+	b.AddOutputLine("END      : Scroll chat to the bottom")
+	b.AddOutputLine("F10      : Quit")
+
 	if b.StartTX {
 		b.ToggleVoice()
 	}
