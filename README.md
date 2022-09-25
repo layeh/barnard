@@ -16,7 +16,7 @@ Requirements:
 
 To fetch and build:
 
-    go get -u layeh.com/barnard
+    go install layeh.com/barnard@latest
 
 After running the command above, `barnard` will be compiled as `$(go env GOPATH)/bin/barnard`.
 
