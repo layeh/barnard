@@ -161,8 +161,9 @@ func (b *Barnard) OnUiInitialize(ui *uiterm.Ui) {
 	b.Ui.AddKeyListener(b.OnScrollOutputTop, uiterm.KeyHome)
 	b.Ui.AddKeyListener(b.OnScrollOutputBottom, uiterm.KeyEnd)
 
-	b.start()
-
+	b.AddOutputLine("                Welcome to Barnard                ")
+	b.AddOutputLine("--------------------------------------------------")
+	b.AddOutputLine("HELP:")
 	b.AddOutputLine("F1       : Toggle Voice Transmission")
 	b.AddOutputLine("CTRL+L   : Clear chat log")
 	b.AddOutputLine("TAB      : Toggle focus between chat and user tree")
@@ -171,6 +172,9 @@ func (b *Barnard) OnUiInitialize(ui *uiterm.Ui) {
 	b.AddOutputLine("HOME     : Scroll chat to the top")
 	b.AddOutputLine("END      : Scroll chat to the bottom")
 	b.AddOutputLine("F10      : Quit")
+	b.AddOutputLine("--------------------------------------------------")
+
+	b.start()
 
 	if b.StartTX {
 		b.ToggleVoice()
