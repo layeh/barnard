@@ -16,15 +16,21 @@ Requirements:
 
 To fetch and build:
 
-    go install layeh.com/barnard@latest
+````
+apt install libalut-dev libopus-dev
+go install layeh.com/barnard@latest
+````
 
 After running the command above, `barnard` will be compiled as `$(go env GOPATH)/bin/barnard`.
 
 ## Development Environment Setup
+
+````
 apt install libalut-dev libopus-dev
 go mod init
 go get
 go build
+````
 
 ## Manual
 
