@@ -44,6 +44,11 @@ func (b *Barnard) AddOutputMessage(sender *gumble.User, message string) {
 }
 
 func (b *Barnard) OnVoiceToggle(ui *uiterm.Ui, key uiterm.Key) {
+	b.ToggleVoice()
+	ui.Refresh()
+}
+
+func (b *Barnard) ToggleVoice() {
 	if b.UiStatus.Text == "  Tx  " {
 		b.UiStatus.Text = " Idle "
 		b.UiStatus.Fg = uiterm.ColorBlack
@@ -55,7 +60,6 @@ func (b *Barnard) OnVoiceToggle(ui *uiterm.Ui, key uiterm.Key) {
 		b.UiStatus.Text = "  Tx  "
 		b.Stream.StartSource()
 	}
-	ui.Refresh()
 }
 
 func (b *Barnard) OnQuitPress(ui *uiterm.Ui, key uiterm.Key) {
@@ -158,6 +162,14 @@ func (b *Barnard) OnUiInitialize(ui *uiterm.Ui) {
 	b.Ui.AddKeyListener(b.OnScrollOutputBottom, uiterm.KeyEnd)
 
 	b.start()
+
+	if b.StartTX {
+		b.ToggleVoice()
+	}
+
+	if b.StartupChannel != "" {
+		b.Client.Self.Move(b.Client.Channels.Find(b.StartupChannel))
+	}
 }
 
 func (b *Barnard) OnUiResize(ui *uiterm.Ui, width, height int) {

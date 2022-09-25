@@ -18,13 +18,17 @@ func main() {
 	password := flag.String("password", "", "the password of the server")
 	insecure := flag.Bool("insecure", false, "skip server certificate verification")
 	certificate := flag.String("certificate", "", "PEM encoded certificate and private key")
+	channel := flag.String("channel", "", "the channel to join")
+	starttx := flag.Bool("tx", false, "start transmitting immediately")
 
 	flag.Parse()
 
 	// Initialize
 	b := Barnard{
-		Config:  gumble.NewConfig(),
-		Address: *server,
+		Config:         gumble.NewConfig(),
+		Address:        *server,
+		StartTX:        *starttx,
+		StartupChannel: *channel,
 	}
 
 	b.Config.Username = *username

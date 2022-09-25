@@ -12,8 +12,10 @@ type Barnard struct {
 	Config *gumble.Config
 	Client *gumble.Client
 
-	Address   string
-	TLSConfig tls.Config
+	Address        string
+	TLSConfig      tls.Config
+	StartTX        bool
+	StartupChannel string
 
 	Stream *gumbleopenal.Stream
 
