@@ -20,6 +20,12 @@ To fetch and build:
 
 After running the command above, `barnard` will be compiled as `$(go env GOPATH)/bin/barnard`.
 
+## Development Environment Setup
+apt install libalut-dev libopus-dev
+go mod init
+go get
+go build
+
 ## Manual
 
 ### Key bindings
