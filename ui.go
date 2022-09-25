@@ -153,7 +153,8 @@ func (b *Barnard) OnUiInitialize(ui *uiterm.Ui) {
 	ui.Add(uiViewTree, &b.UiTree)
 
 	b.Ui.AddKeyListener(b.OnFocusPress, uiterm.KeyTab)
-	b.Ui.AddKeyListener(b.OnVoiceToggle, uiterm.KeyF1)
+	b.Ui.AddKeyListener(b.ShowHelp, uiterm.KeyF1)
+	b.Ui.AddKeyListener(b.OnVoiceToggle, uiterm.KeyF2)
 	b.Ui.AddKeyListener(b.OnQuitPress, uiterm.KeyF10)
 	b.Ui.AddKeyListener(b.OnClearPress, uiterm.KeyCtrlL)
 	b.Ui.AddKeyListener(b.OnScrollOutputUp, uiterm.KeyPgup)
@@ -161,18 +162,7 @@ func (b *Barnard) OnUiInitialize(ui *uiterm.Ui) {
 	b.Ui.AddKeyListener(b.OnScrollOutputTop, uiterm.KeyHome)
 	b.Ui.AddKeyListener(b.OnScrollOutputBottom, uiterm.KeyEnd)
 
-	b.AddOutputLine("                Welcome to Barnard                ")
-	b.AddOutputLine("--------------------------------------------------")
-	b.AddOutputLine("HELP:")
-	b.AddOutputLine("F1       : Toggle Voice Transmission")
-	b.AddOutputLine("CTRL+L   : Clear chat log")
-	b.AddOutputLine("TAB      : Toggle focus between chat and user tree")
-	b.AddOutputLine("Page Up  : Scroll chat up")
-	b.AddOutputLine("Page Down: Scroll chat down")
-	b.AddOutputLine("HOME     : Scroll chat to the top")
-	b.AddOutputLine("END      : Scroll chat to the bottom")
-	b.AddOutputLine("F10      : Quit")
-	b.AddOutputLine("--------------------------------------------------")
+	b.showHelp()
 
 	b.start()
 
@@ -193,4 +183,24 @@ func (b *Barnard) OnUiResize(ui *uiterm.Ui, width, height int) {
 	ui.SetBounds(uiViewInputStatus, 0, height-2, width, height-1)
 	ui.SetBounds(uiViewOutput, 0, 1, width-20, height-2)
 	ui.SetBounds(uiViewTree, width-20, 1, width, height-2)
+}
+
+func (b *Barnard) showHelp() {
+	b.AddOutputLine("                Welcome to Barnard                ")
+	b.AddOutputLine("--------------------------------------------------")
+	b.AddOutputLine("HELP:")
+	b.AddOutputLine("F1       : Show this help message")
+	b.AddOutputLine("F2       : Toggle Voice Transmission")
+	b.AddOutputLine("CTRL+L   : Clear chat log")
+	b.AddOutputLine("TAB      : Toggle focus between chat and user tree")
+	b.AddOutputLine("Page Up  : Scroll chat up")
+	b.AddOutputLine("Page Down: Scroll chat down")
+	b.AddOutputLine("HOME     : Scroll chat to the top")
+	b.AddOutputLine("END      : Scroll chat to the bottom")
+	b.AddOutputLine("F10      : Quit")
+	b.AddOutputLine("--------------------------------------------------")
+}
+
+func (b *Barnard) ShowHelp(ui *uiterm.Ui, key uiterm.Key) {
+	b.showHelp()
 }
