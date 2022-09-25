@@ -1,8 +1,19 @@
-# barnard
+# barnard FORKED by farmergreg
 
 barnard is a terminal-based client for the [Mumble](https://mumble.info) voice
 chat software.
 
+This FORK adds two new features:
+
+- the -tx flag will cause barnard to start transmitting as soon as it is launched.
+- the -channel flag will cause barnard to join the given channel.
+
+Example:
+````
+    ./barnard -insecure -password mypass -server mumble:64738 -username AudioFeed -tx -channel "K9CTS Scanner"
+````
+
+## Screenshot
 ![Screenshot](https://i.imgur.com/B8ldT5k.png)
 
 ## Installation
