@@ -36,7 +36,8 @@ go build
 
 ### Key bindings
 
-- <kbd>F1</kbd>: toggle voice transmission
+- <kbd>F1</kbd>: show help
+- <kbd>F2</kbd>: toggle voice transmission
 - <kbd>Ctrl+L</kbd>: clear chat log
 - <kbd>Tab</kbd>: toggle focus between chat and user tree
 - <kbd>Page Up</kbd>: scroll chat up
