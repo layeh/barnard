@@ -45,6 +45,7 @@ func New(manager UiManager) *Ui {
 
 func (ui *Ui) Close() {
 	if termbox.IsInit {
+		termbox.Close()
 		ui.close <- true
 	}
 }

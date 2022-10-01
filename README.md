@@ -16,15 +16,28 @@ Requirements:
 
 To fetch and build:
 
-    go get -u layeh.com/barnard
+````
+apt install libalut-dev libopus-dev
+go install layeh.com/barnard@latest
+````
 
 After running the command above, `barnard` will be compiled as `$(go env GOPATH)/bin/barnard`.
+
+## Development Environment Setup
+
+````
+apt install libalut-dev libopus-dev
+go mod init
+go get
+go build
+````
 
 ## Manual
 
 ### Key bindings
 
-- <kbd>F1</kbd>: toggle voice transmission
+- <kbd>F1</kbd>: show help
+- <kbd>F2</kbd>: toggle voice transmission
 - <kbd>Ctrl+L</kbd>: clear chat log
 - <kbd>Tab</kbd>: toggle focus between chat and user tree
 - <kbd>Page Up</kbd>: scroll chat up

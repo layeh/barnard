@@ -17,6 +17,7 @@ func (b *Barnard) start() {
 	var err error
 	_, err = gumble.DialWithDialer(new(net.Dialer), b.Address, b.Config, &b.TLSConfig)
 	if err != nil {
+		b.Ui.Close()
 		fmt.Fprintf(os.Stderr, "%s\n", err)
 		os.Exit(1)
 	}
@@ -26,6 +27,7 @@ func (b *Barnard) start() {
 		os.Setenv("ALSOFT_LOGLEVEL", "0")
 	}
 	if stream, err := gumbleopenal.New(b.Client); err != nil {
+		b.Ui.Close()
 		fmt.Fprintf(os.Stderr, "%s\n", err)
 		os.Exit(1)
 	} else {
